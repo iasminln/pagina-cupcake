@@ -25,7 +25,7 @@ body {
 
 .titulo h1 {
   text-align: center;
-  font-size: 38px;
+  font-size: 2.5rem;
 }
 
 /*** Navegação ***/
@@ -68,6 +68,7 @@ header a {
 
 header a:hover {
   opacity: 0.7;
+  border: 2px solid #f389ad;
 }
 
 /*** Bloco inicio ***/
@@ -126,7 +127,7 @@ header a:hover {
 }
 
 .texto-inicio h1 {
-  font-size: 30px;
+  font-size: 2rem;
   line-height: 2;
 }
 
@@ -150,127 +151,72 @@ header a:hover {
 }
 
 .vantagens-texto {
+  padding-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 40px;
-  font-size: 46px;
+  font-size: 3rem;
   line-height: 1;
   text-align: end;
   color: #c6c6c6;
 }
 
-.vantagens-itens {
+.vantagens-texto h1 {
+  background: url("./img/onda.svg");
+  padding: 40px 0;
+}
+
+.vantagens-lista {
   background-color: white;
   padding: 40px;
   display: -ms-grid;
   display: grid;
-  gap: 30px;
 }
 
-.vantagem1 {
+.vantagem-item {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "img1 t1" ". p1";
   -ms-grid-columns: 30px 1fr;
       grid-template-columns: 30px 1fr;
   gap: 0 10px;
+  padding: 12px 20px;
+  border-left: 4px solid transparent;
 }
 
-.vantagem1 img {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: img1;
+.vantagem-item:nth-child(odd) {
+  background-color: #f7f7f7;
+}
+
+.vantagem-item img {
   max-width: 22px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.vantagem1 h2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: t1;
-  font-size: 22px;
+.vantagem-item h2 {
+  font-size: 1.5rem;
   margin-bottom: 5px;
 }
 
-.vantagem1 p {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: p1;
+.vantagem-item p {
   line-height: 1.4;
+  grid-column: 2/-1;
 }
 
-.vantagem2 {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "img2 t2" ". p2";
-  -ms-grid-columns: 30px 1fr;
-      grid-template-columns: 30px 1fr;
-  gap: 0 10px;
+.vantagem-item:hover {
+  cursor: pointer;
 }
 
-.vantagem2 img {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: img2;
-  max-width: 22px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.vantagem-item:hover:nth-child(odd) {
+  border-left: 4px solid #f389ad;
 }
 
-.vantagem2 h2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: t2;
-  font-size: 22px;
-  margin-bottom: 5px;
-}
-
-.vantagem2 p {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: p2;
-  line-height: 1.4;
-}
-
-.vantagem3 {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "img3 t3" ". p3";
-  -ms-grid-columns: 30px 1fr;
-      grid-template-columns: 30px 1fr;
-  gap: 0 10px;
-}
-
-.vantagem3 img {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: img3;
-  max-width: 22px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.vantagem3 h2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: t3;
-  font-size: 22px;
-  margin-bottom: 5px;
-}
-
-.vantagem3 p {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: p3;
-  line-height: 1.4;
+.vantagem-item:hover:nth-child(even) {
+  border-left: 4px solid #98e3e9;
 }
 
 /*** Footer ***/
@@ -281,7 +227,7 @@ footer {
 }
 
 footer h3 {
-  font-size: 26px;
+  font-size: 1.25rem;
   text-align: center;
   color: #c6c6c6;
 }
