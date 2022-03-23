@@ -19,7 +19,7 @@ body {
 
 /*** Titulo ***/
 .titulo {
-  padding: 0 calc((100% - 1024px) / 2);
+  padding: 0 calc((100% - 1000px) / 2);
   margin: 30px 0 10px 0;
 }
 
@@ -30,7 +30,7 @@ body {
 
 /*** Navegação ***/
 header {
-  padding: 20px calc((100% - 1024px) / 2);
+  padding: 20px calc((100% - 1000px) / 2);
 }
 
 header ul {
@@ -38,9 +38,12 @@ header ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
 }
 
 header a {
@@ -72,15 +75,15 @@ header a:hover {
 }
 
 /*** Bloco inicio ***/
-.bloco-inicio {
-  padding: 0 calc((100% - 1024px) / 2);
+.bloco-article {
+  padding: 0 calc((100% - 1000px) / 2);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
 }
 
-.texto-inicio::after {
+.texto-inicio::before {
   content: "";
   width: 60px;
   height: 4px;
@@ -91,6 +94,7 @@ header a:hover {
 }
 
 .texto-inicio {
+  text-align: right;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,14 +102,15 @@ header a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   background-color: white;
-  padding: 0 40px;
+  padding: 20px 40px;
   position: relative;
 }
 
@@ -128,7 +133,6 @@ header a:hover {
 
 .texto-inicio h1 {
   font-size: 2rem;
-  line-height: 2;
 }
 
 .texto-inicio p {
@@ -138,18 +142,10 @@ header a:hover {
 
 .imagem-inicio img {
   max-width: 100%;
-  height: 100%;
+  display: block;
 }
 
 /*** Vantagens ***/
-.vantagens-cupcake {
-  padding: 0 calc((100% - 1024px) / 2);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-}
-
 .vantagens-texto {
   padding-right: 40px;
   display: -webkit-box;
@@ -222,7 +218,7 @@ header a:hover {
 /*** Footer ***/
 footer {
   background-color: white;
-  padding: 40px calc((100% - 1024px) / 2);
+  padding: 40px calc((100% - 1000px) / 2);
   margin-top: 60px;
 }
 
@@ -230,5 +226,61 @@ footer h3 {
   font-size: 1.25rem;
   text-align: center;
   color: #c6c6c6;
+}
+
+/*** Media query ***/
+@media (max-width: 900px) {
+  header,
+  article {
+    max-width: 510px;
+    margin: 0 auto;
+  }
+  .bloco-article {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .texto-inicio::before {
+    content: "";
+    width: 4px;
+    height: 60px;
+    background-color: #f389ad;
+    position: absolute;
+    top: auto;
+    bottom: -30px;
+    left: 30px;
+  }
+  header ul {
+    gap: 15px;
+  }
+  header a {
+    width: 110px;
+    height: 40px;
+  }
+  .vantagens-texto {
+    padding: 0;
+  }
+}
+
+@media (max-width: 510px) {
+  .texto-inicio {
+    padding: 20px;
+  }
+  .vantagens-lista {
+    padding: 20px;
+  }
+  .vantagens-texto {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.75rem;
+    text-align: center;
+    margin: 0 10px;
+  }
+  .vantagem-item {
+    gap: 0 10px;
+    padding: 8px 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

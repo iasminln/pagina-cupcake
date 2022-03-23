@@ -1,6 +1,6 @@
 # Página do Cupcake
 
-Estudo sobre utilização de Flexbox e Grid. Layout feito apenas para desktop (não responsivo).
+Estudo sobre utilização de Flexbox e Grid.
 
 ![imagem](https://cdn.discordapp.com/attachments/886990631879204954/955663146075455488/unknown.png)
 
