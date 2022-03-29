@@ -1,3 +1,19 @@
+:root {
+  --texto-principal: #111111;
+  --texto-secundario: rgba(0, 0, 0, 0.2);
+  --background-principal: #f7f7f7;
+  --background-branco: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --texto-principal: #f7f7f7;
+    --texto-secundario: rgba(255, 255, 255, 0.3);
+    --background-principal: #2b2b2b;
+    --background-branco: #111111;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +26,9 @@ ul {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #111111;
+  color: var(--texto-principal);
   font-size: 16px;
-  background-color: #f7f7f7;
+  background-color: var(--background-principal);
 }
 
 /*** Titulo ***/
@@ -87,7 +103,7 @@ header {
   justify-content: center;
   gap: 20px;
   align-items: flex-end;
-  background-color: white;
+  background-color: var(--background-branco);
   padding: 20px 40px;
   position: relative;
 
@@ -133,16 +149,15 @@ header {
   font-size: 3rem;
   line-height: 1;
   text-align: end;
-  color: #c6c6c6;
+  color: var(--texto-secundario);
 
   h1 {
-    background: url("./img/onda.svg");
     padding: 40px 0;
   }
 }
 
 .vantagens-lista {
-  background-color: white;
+  background-color: var(--background-branco);
   padding: 40px;
   display: grid;
 }
@@ -155,7 +170,7 @@ header {
   border-left: 4px solid transparent;
 
   &:nth-child(odd) {
-    background-color: #f7f7f7;
+    background-color: var(--background-principal);
   }
 
   img {
@@ -189,14 +204,14 @@ header {
 /*** Footer ***/
 
 footer {
-  background-color: white;
+  background-color: var(--background-branco);
   padding: 40px calc((100% - 1000px) / 2);
   margin-top: 60px;
 
   h3 {
     font-size: 1.25rem;
     text-align: center;
-    color: #c6c6c6;
+    color: var(--texto-secundario);
   }
 }
 
